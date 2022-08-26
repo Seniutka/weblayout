@@ -1,0 +1,294 @@
+@font-face {
+	font-family: 'Muller';
+	src: local('Muller-Regular'),
+		url('fonts/MullerRegular.woff2') format('woff2'),
+		url('fonts/MullerRegular.woff') format('woff');
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Muller';
+	src: local('Muller-Medium'),
+		url('fonts/MullerMedium.woff2') format('woff2'),
+		url('fonts/MullerMedium.woff') format('woff');
+	font-display: swap;
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Muller';
+	src: local('Muller-Bold'),
+		url('fonts/MullerBold.woff2') format('woff2'),
+		url('fonts/MullerBold.woff') format('woff');
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 1200px;
+  font-family: 'Muller', 'sans-serif';
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.section {
+  padding: 35px 0 35px;
+}
+
+/* header */
+.container {
+  width: 1170px;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.header-up {
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-logo {
+  margin-right: 34px;
+}
+
+.header-telephone {
+  max-width: 173px;
+  min-height: 20px;
+  margin-right: 570px;
+  font-style: normal;
+}
+
+.header-enter-link {
+  max-width: 126px;
+  min-height: 16px;
+}
+
+.header-nav {
+  padding-bottom: 35px;
+
+}
+
+.navigation-items {
+  padding: 27px 45px;
+  margin-right: 134px;
+}
+
+.nav-item {
+  max-width: 110px;
+  min-height: 16px;
+}
+
+.nav-item:not(:last-child) {
+  margin-right: 45px;
+}
+
+.header-buttons {
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header-btn {
+  max-width: 137px;
+}
+
+.header-btn:not(:last-child) {
+  margin-right: 80px;
+}
+
+/* main */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* special-offers */
+.section-title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  max-width: 888px;
+}
+
+.special-content {
+  display: flex;
+}
+
+.special-block {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 49%;
+  margin-right: 24px;
+}
+
+.special-item {
+  flex: 1;
+  padding: 40px 45px;
+  outline: 1px solid coral;
+}
+
+.special-item:first-child {
+  margin-bottom: 30px;
+}
+
+.right-big-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.offer-cost {
+  display: block;
+}
+
+.offer-link {
+  display: inline-block;
+}
+
+/* info */
+.info-text {
+  margin: 0;
+  width: 888px;
+}
+
+/* services */
+.services-lst {
+  flex-wrap: wrap;
+}
+
+.service-item {
+  padding: 26px 126px 35px 45px;
+  width: 558px;
+  outline: 1px solid coral;
+  margin-bottom: 24px;
+}
+
+.serv-item-header {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.service-item:not(:nth-child(2n)) {
+  margin-right: 24px;
+}
+
+.service-text {
+  margin: 0;
+}
+
+/* advantages */
+.advant-lst {
+  flex-wrap: wrap;
+}
+
+.advant-item {
+  width: 267px;
+  min-height: 267px;
+  outline: 1px solid coral;
+  margin-bottom: 24px;
+}
+
+.advant-item:not(:nth-child(4n)) {
+  margin-right: 24px;
+}
+
+.advant-text {
+  margin: 0;
+  padding: 10px 42px 32px 45px;
+}
+
+/* placement */
+.placement-lst {
+  flex-wrap: wrap;
+}
+
+.place-item {
+  width: 364px;
+  min-height: 440px;
+  margin-bottom: 24px;
+  outline: 1px solid coral;
+}
+
+.place-item:not(:nth-child(3n)) {
+  margin-right: 24px;
+}
+
+.place-card-text {
+  padding: 32px 45px;
+}
+
+.place-cost {
+  display: inline-block;
+  margin-bottom: 16px;
+  max-width: 138px;
+}
+
+.place-cost {
+  margin-right: 57px;
+}
+
+.place-hotel-title {
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.place-country {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.hotel-btn {
+  padding: 13px 20px;
+}
+
+.see-all {
+  justify-content: center;
+  align-items: flex-end;
+  padding: 27px;
+}
