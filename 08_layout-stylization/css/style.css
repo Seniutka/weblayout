@@ -1,0 +1,489 @@
+@font-face {
+	font-family: 'Muller';
+	src: local('Muller-Regular'),
+		url('../fonts/MullerRegular.woff2') format('woff2'),
+		url('../fonts/MullerRegular.woff') format('woff');
+	font-display: swap;
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Muller';
+	src: local('Muller-Medium'),
+		url('../fonts/MullerMedium.woff2') format('woff2'),
+		url('../fonts/MullerMedium.woff') format('woff');
+	font-display: swap;
+	font-weight: 500;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Muller';
+	src: local('Muller-Bold'),
+		url('../fonts/MullerBold.woff2') format('woff2'),
+		url('../fonts/MullerBold.woff') format('woff');
+	font-display: swap;
+	font-weight: 700;
+	font-style: normal;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  min-width: 1200px;
+  font-family: 'Muller', 'sans-serif';
+  background-color: #E5E5E5;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn-reset {
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.section {
+  padding: 35px 0 35px;
+}
+
+/* header */
+.header {
+  padding: 30px 0 35px;
+}
+
+.container {
+  width: 1170px;
+  max-width: 100%;
+  padding: 0 15px;
+  margin: auto;
+}
+
+.header-up {
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.header-logo {
+  margin-right: 34px;
+  flex-shrink: 0;
+}
+
+.header-telephone {
+  margin-right: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 20px;
+  color: #666666;
+}
+
+.header-enter-link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #cc9933;
+  background-image: url(../img/arrow-enter.svg);
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 21px 12px;
+  padding-left: 28px;
+}
+
+.header-nav {
+  max-width: inherit;
+  padding: 14px 45px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.navigation-items {
+  align-items: center;
+}
+
+.nav-item {
+  margin-right: 45px;
+}
+
+.nav-link {
+  font-size: 16px;
+  line-height: 16px;
+  color: #666;
+}
+
+.header-buttons {
+  align-items: flex-start;
+  justify-content: space-around;
+}
+
+.header-btn {
+  margin-right: 40px;
+  padding: 13px 20px;
+  border: 1px solid #cc9933;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #cc9933;
+}
+
+.header-btn:last-child {
+  margin-right: 0;
+}
+
+
+/* main */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* special-offers */
+.section-title {
+  margin: 0;
+  margin-bottom: 20px;
+  padding-left: 25px;
+  max-width: 888px;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 40px;
+  color: #333;
+}
+
+.special-content {
+  display: flex;
+}
+
+.special-block {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 49%;
+  margin-right: 24px;
+}
+
+.special-item {
+  flex: 1;
+  padding: 40px 45px;
+  background-repeat: no-repeat;
+  background-color: #333;
+  background-size: cover;
+  border-radius: 15px;
+}
+
+.upper-card {
+  background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%),
+  url(../img/upper-left-offer.jpg);
+  background-size: cover;
+}
+
+.lower-card {
+  background: linear-gradient(90deg, rgba(48, 64, 89, 0.84) -2.9%, rgba(53, 65, 83, 0) 65.7%),
+  url(../img/lower-left-offer.jpg);
+  background-size: cover;
+}
+
+.right-big-card {
+  background-image: url(../img/right-offer.jpg);
+}
+
+.special-item:first-child {
+  margin-bottom: 30px;
+}
+
+.offer-header {
+  margin: 0;
+  margin-bottom: 15px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 40px;
+  color: #fff;
+}
+
+.right-big-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.offer-cost {
+  display: block;
+  margin-bottom: 47px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.offer-link {
+  margin-right: auto;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #F0BF5F;
+}
+
+.link {
+  background-image: url(../img/arrow-cards.svg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: 16px 16px;
+  padding-right: 20px;
+}
+
+/* info */
+.info-text {
+  margin: 0;
+  width: 80%;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+  color: #000;
+}
+
+/* services */
+.services-lst {
+  flex-wrap: wrap;
+}
+
+.service-item {
+  padding: 191px 45px 35px;
+  width: 558px;
+  margin-bottom: 24px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: top;
+  border-radius: 15px;
+}
+
+.serv-item-1 {
+  background-image: url(../img/serveces-1.jpg);
+}
+
+.serv-item-2 {
+  background-image: url(../img/sereces-2.jpg);
+}
+
+.serv-item-3 {
+  background-image: url(../img/serveces-3.jpg);
+}
+
+.serv-item-4 {
+  background-image: url(../img/serveces-4.jpg);
+}
+
+.serv-item-header {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 200%;
+  color: #cc9933;
+}
+
+.service-item:not(:nth-child(2n)) {
+  margin-right: 24px;
+}
+
+.service-text {
+  margin: 0;
+  max-width: 402px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+}
+
+/* advantages */
+.advant-lst {
+  flex-wrap: wrap;
+}
+
+.advant-item {
+  max-width: 267px;
+  min-height: 267px;
+  margin-bottom: 24px;
+  padding: 116px 42px 32px 45px;
+  border-radius: 15px;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: 45px 40px;
+  background-size: 64px 66px;
+}
+
+.advant-item:not(:nth-child(4n)) {
+  margin-right: 24px;
+}
+
+.advant-item-1 {
+  background-image: url(../img/advant-1.svg);
+}
+
+.advant-item-2 {
+  background-image: url(../img/advant-2.svg);
+}
+
+.advant-item-3 {
+  background-image: url(../img/advant-3.svg);
+}
+
+.advant-item-4 {
+  background-image: url(../img/advant-4.svg);
+}
+
+.advant-item-5 {
+  background-image: url(../img/advant-5.svg);
+}
+
+.advant-item-6 {
+  background-image: url(../img/advant-6.svg);
+}
+
+.advant-item-7 {
+  background-image: url(../img/advant-7.svg);
+}
+
+.advant-item-8 {
+  background-image: url(../img/advant-8.svg);
+}
+
+.advant-text {
+  margin: 0;
+  width: 189px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 200%;
+}
+
+/* placement */
+.placement-lst {
+  flex-wrap: wrap;
+}
+
+.place-item {
+  width: 364px;
+  min-height: 440px;
+  margin-bottom: 24px;
+  background-color: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.place-item:not(:nth-child(3n)) {
+  margin-right: 24px;
+}
+
+.place-card-text {
+  padding: 32px 45px;
+}
+
+.cost-stars-cont {
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.place-cost {
+  display: inline-block;
+  max-width: 138px;
+}
+
+.from {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #999;
+}
+
+.cost {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 20px;
+  color: #000;
+}
+
+.stars-container {
+  display: inline-block;
+}
+
+.place-hotel-title {
+  margin: 0;
+  margin-bottom: 16px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000;
+}
+
+.place-country {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #999;
+}
+
+.hotel-btn {
+  padding: 13px 20px;
+  border: 1px solid #cc9933;
+  border-radius: 10px;
+  font-size: 16px;
+  line-height: 16px;
+  color: #cc9933;
+}
+
+.see-all {
+  justify-content: center;
+  align-items: flex-end;
+  padding: 27px;
+  background-color: #333;
+  background-image: url(../img/see-all-var.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.place-link {
+  padding-right: 16px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 200%;
+  color: #fff;
+  background-image: url(../img/arrow-see-all.svg);
+  background-repeat: no-repeat;
+  background-position: right center;
+}
