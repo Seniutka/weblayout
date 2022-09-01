@@ -1,8 +1,8 @@
 @font-face {
 	font-family: 'Muller';
 	src: local('Muller-Regular'),
-		url('fonts/MullerRegular.woff2') format('woff2'),
-		url('fonts/MullerRegular.woff') format('woff');
+		url('../fonts/MullerRegular.woff2') format('woff2'),
+		url('../fonts/MullerRegular.woff') format('woff');
 	font-display: swap;
 	font-weight: 400;
 	font-style: normal;
@@ -11,8 +11,8 @@
 @font-face {
 	font-family: 'Muller';
 	src: local('Muller-Medium'),
-		url('fonts/MullerMedium.woff2') format('woff2'),
-		url('fonts/MullerMedium.woff') format('woff');
+		url('../fonts/MullerMedium.woff2') format('woff2'),
+		url('../fonts/MullerMedium.woff') format('woff');
 	font-display: swap;
 	font-weight: 500;
 	font-style: normal;
@@ -22,8 +22,8 @@
 @font-face {
 	font-family: 'Muller';
 	src: local('Muller-Bold'),
-		url('fonts/MullerBold.woff2') format('woff2'),
-		url('fonts/MullerBold.woff') format('woff');
+		url('../fonts/MullerBold.woff2') format('woff2'),
+		url('../fonts/MullerBold.woff') format('woff');
 	font-display: swap;
 	font-weight: 700;
 	font-style: normal;
@@ -75,8 +75,13 @@ body {
 }
 
 /* header */
+.header {
+  padding: 30px 0 35px;
+}
+
 .container {
   width: 1170px;
+  max-width: 100%;
   padding: 0 15px;
   margin: auto;
 }
@@ -88,42 +93,33 @@ body {
 
 .header-logo {
   margin-right: 34px;
+  flex-shrink: 0;
 }
 
 .header-telephone {
-  max-width: 173px;
-  min-height: 20px;
-  margin-right: 570px;
+  margin-right: auto;
   font-style: normal;
 }
 
-.header-enter-link {
-  max-width: 126px;
-  min-height: 16px;
-}
-
 .header-nav {
-  padding-bottom: 35px;
-
+  max-width: inherit;
+  padding: 27px 45px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  outline: 1px solid coral;
 }
 
 .navigation-items {
-  padding: 27px 45px;
-  margin-right: 134px;
+  align-items: stretch;
 }
 
 .nav-item {
-  max-width: 110px;
-  min-height: 16px;
-}
-
-.nav-item:not(:last-child) {
   margin-right: 45px;
 }
 
 .header-buttons {
-  align-items: center;
-  justify-content: flex-end;
+  align-items: flex-start;
+  justify-content: stretch;
 }
 
 .header-btn {
@@ -177,6 +173,11 @@ body {
   margin-bottom: 30px;
 }
 
+.offer-header {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
 .right-big-card {
   display: flex;
   flex-direction: column;
@@ -185,6 +186,7 @@ body {
 
 .offer-cost {
   display: block;
+  margin-bottom: 47px;
 }
 
 .offer-link {
@@ -194,7 +196,7 @@ body {
 /* info */
 .info-text {
   margin: 0;
-  width: 888px;
+  width: 80%;
 }
 
 /* services */
@@ -228,10 +230,12 @@ body {
 }
 
 .advant-item {
-  width: 267px;
+  /* max-width: 267px; */
+  flex-basis: 267px;
   min-height: 267px;
   outline: 1px solid coral;
   margin-bottom: 24px;
+  padding: 10px 42px 32px 45px;
 }
 
 .advant-item:not(:nth-child(4n)) {
@@ -240,7 +244,6 @@ body {
 
 .advant-text {
   margin: 0;
-  padding: 10px 42px 32px 45px;
 }
 
 /* placement */
@@ -263,14 +266,18 @@ body {
   padding: 32px 45px;
 }
 
-.place-cost {
-  display: inline-block;
+.cost-stars-cont {
+  justify-content: space-between;
   margin-bottom: 16px;
-  max-width: 138px;
 }
 
 .place-cost {
-  margin-right: 57px;
+  display: inline-block;
+  max-width: 138px;
+}
+
+.stars-container {
+  display: inline-block;
 }
 
 .place-hotel-title {
