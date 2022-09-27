@@ -157,6 +157,7 @@ ul {
 
 .header__logo-link {
   margin-right: auto;
+  flex-shrink: 0;
 }
 
 .header__nav {
@@ -322,7 +323,7 @@ ul {
   background-image: url(../img/info/info-pic.png);
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 100% 100%;
+  background-size: cover;
   border-radius: 32px;
   overflow: hidden;
 }
