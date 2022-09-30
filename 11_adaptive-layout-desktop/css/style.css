@@ -99,7 +99,6 @@ ul {
 
 .container {
   max-width: 1800px;
-  min-width: 768px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -143,16 +142,14 @@ ul {
 
 /* header */
 .header {
-  width: 100%;
-  margin-bottom: 25px;
   background-color: var(--white);
   box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
   border-radius: 0px 0px 32px 32px;
+  padding: 19px 0;
 }
 
-.header__wrapper {
+.header__container {
   align-items: center;
-  padding: 11px 0;
 }
 
 .header__logo-link {
@@ -162,7 +159,6 @@ ul {
 
 .header__nav {
   margin-right: 261px;
-  padding-bottom: 5px;
 }
 
 .header__nav-item:not(:last-child) {
@@ -235,7 +231,7 @@ ul {
 
 /* hero */
 .hero {
-  padding-top: 25px;
+  padding-top: 43px;
   padding-bottom: 25px;
 }
 
@@ -299,7 +295,7 @@ ul {
 }
 
 .info__header {
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .info__text {
@@ -320,7 +316,7 @@ ul {
   flex-direction: row;
   align-items: flex-end;
   background-color: #414141;
-  background-image: url(../img/info/info-pic.png);
+  background-image: url(../img/info/info-pic.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -338,8 +334,9 @@ ul {
 }
 
 .left-card__text {
-  display: inline-block;
-  width: 64%;
+  flex-shrink: 0;
+  flex-basis: 63%;
+  margin-right: 20px;
   font-weight: 700;
   font-size: 16px;
   line-height: 32px;
@@ -414,6 +411,10 @@ ul {
   padding-bottom: 50px;
 }
 
+.process__wrapper {
+  width: inherit;
+}
+
 .process__header {
   margin-bottom: 50px;
 }
@@ -455,23 +456,6 @@ ul {
   min-height: 400px;
 }
 
-.process__content * {
-  width: 40%;
-}
-
-.process__content::before {
-  content: "";
-  position: absolute;
-  width: 49%;
-  bottom: 0;
-  right: 0;
-  top: 9px;
-  background-image: url(../img/work/work-main-pic.png);
-  background-size: cover;
-  background-position: center;
-  border-radius: 32px;
-}
-
 .process__subtitle {
   margin-bottom: 8px;
   font-weight: 700;
@@ -480,11 +464,15 @@ ul {
 }
 
 .process__text {
-  width: 43%;
+  width: 83%;
   margin-bottom: 18px;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
+}
+
+.process__btn-container {
+  width: 40%;
 }
 
 .process__btn {
@@ -501,7 +489,6 @@ ul {
 }
 
 .process__btn--left-btn {
-  max-width: 175px;
   background-color: var(--orange);
   color: var(--white);
   transition: background-color .3s ease-in-out;
@@ -522,7 +509,6 @@ ul {
 }
 
 .process__btn--right-btn {
-  max-width: 147px;
   padding-left: 36px;
   border: 1px solid #000000;
   background-color: var(--white);
@@ -551,9 +537,10 @@ ul {
   color: var(--white);
 }
 
+
 /* faq */
 .faq {
-  padding-top: 61px;
+  padding-top: 58px;
   padding-bottom: 50px;
 }
 
@@ -561,73 +548,109 @@ ul {
   margin-bottom: 32px;
 }
 
-.faq__item-btn {
+.faq__list-item:first-child {
+  border-top: 1px solid var(--gray-light);
+}
+
+.faq__list-item {
+  margin-top: -1px;
+  border-top: 1px solid transparent;
+  border-bottom: 1px solid var(--gray-light);
+  transition: border-color .3s ease;
+}
+
+.faq__list-item:first-child:focus-visible,
+.faq__list-item:focus-visible,
+.faq__list-item:focus-within {
+  border-color: var(--orange);
+}
+
+.faq__list-item:first-child:hover:not(:focus-visible),
+.faq__list-item:hover:not(:focus-visible) {
+  border-color: var(--orange);
+}
+
+.faq__list-item:first-child:active:not(:focus-visible),
+.faq__list-item:active:not(:focus-visible) {
+  border-color: var(--gray-light);
+}
+
+.faq__btn-text {
+  position: relative;
+  display: block;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
-  padding: 30px 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 38px 120px 40px 2px;
+  font-size: 24px;
+  text-align: left;
+  font-weight: 700;
+  line-height: 32px;
   background-color: transparent;
   border: none;
-  border-top: 1px solid var(--gray-light);
-  border-bottom: 1px solid var(--gray-light);
-  margin-bottom: -1px;
-  position: relative;
   cursor: pointer;
-  transition: border-color .3s ease-in-out;
+  transition: color .3s ease;
 }
 
-.faq__bth-text {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 32px;
-  margin-right: auto;
-  transition: color .3s ease-in-out;
-}
-
-.faq__item-btn svg path {
-  transition: fill .3s ease-in-out;
-}
-
-.faq__item-btn svg ellipse {
-  transition: fill .3s ease-in-out;
-}
-
-.faq__bth-text:focus-visible,
-.faq__item-btn:focus-visible,
-.faq__item-btn:focus-visible svg ellipse {
-  border-color: var(--orange);
+.faq__btn-text:focus-visible {
   color: var(--orange);
-  z-index: 1;
+}
+
+.faq__btn-text:hover:not(:focus-visible) {
+  color: var(--orange);
+}
+
+.faq__btn-text:active:not(:focus-visible) {
+  color: var(--black);
+}
+
+.faq__icon {
+  position: absolute;
+  top: 28%;
+  right: 0;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: lightgray;
+  transition: fill .3s, .6s ease, transform .3s, .6s ease;
+}
+
+.faq__icon ellipse {
+  transition: fill .3s ease-in-out;
+}
+
+.faq__icon path {
+  transition: fill .3s ease-in-out;
+}
+
+.faq__btn-text:focus-visible .faq__icon ellipse {
   fill: var(--orange);
 }
 
-.faq__item-btn:focus-visible svg path {
-  fill: var(--white);
+.faq__btn-text:focus-visible .faq__icon path {
+  fill: var(--white)
 }
 
-@media (min-width: 1200px) {
-  .faq__bth-text:hover:not(:focus-visible),
-  .faq__item-btn:hover:not(:focus-visible),
-  .faq__item-btn:hover svg ellipse{
-    border-color: var(--orange);
-    color: var(--orange);
-    z-index: 1;
-    fill: var(--orange)
-  }
-
-  .faq__item-btn:hover:not(:focus-visible) svg path {
-    fill: var(--white);
-  }
+.faq__btn-text:hover:not(:focus-visible) .faq__icon ellipse {
+  fill: var(--orange)
 }
 
-.faq__item-btn svg {
-  transition: transform .3s ease-in-out;
+.faq__btn-text:hover:not(:focus-visible) .faq__icon path {
+  fill: var(--white)
 }
 
-.faq__item-btn:active:not(:focus-visible) svg {
+.faq__btn-text:active:not(:focus-visible) .faq__icon ellipse {
+  fill: var(--gray-light)
+}
+
+.faq__btn-text:active:not(:focus-visible) .faq__icon path{
+  fill: var(--black);
+}
+
+.faq__btn-text:active:not(:focus-visible) .faq__icon {
   transform: rotate(45deg);
 }
+
 
 /* footer */
 .footer {
@@ -637,7 +660,7 @@ ul {
 
 .footer__content {
   display: flex;
-  padding: 81px 0;
+  padding: 96px 0;
   justify-content: space-between;
   align-items: flex-start;
 }
@@ -651,11 +674,11 @@ ul {
   display: flex;
   flex-direction: column;
   width: 28%;
+  margin-right: 17px;
 }
 
 .footer__logo {
   margin-bottom: 16px;
-  padding-top: 19px;
 }
 
 .footer__nav {
@@ -695,8 +718,8 @@ ul {
   transition: fill .3s ease-in-out;
 }
 
-.footer__social-link:not(:last-child) {
-  margin-right: 21px;
+.socials__item:not(:last-child) {
+  margin-right: 24px;
 }
 
 .footer__social-link:focus-visible svg {
@@ -715,7 +738,6 @@ ul {
 }
 
 .input-form {
-  padding: 18px 0 0 9px;
   width: 32%;
 }
 
@@ -738,6 +760,7 @@ ul {
   padding: 14px 24px;
   color: var(--white);
   background-color: var(--deep-gray);
+  border: none;
   border-radius: 15px;
   height: 60px;
   font-family: inherit;
@@ -784,9 +807,8 @@ ul {
 }
 
 .input-form__btn {
-  width: 48%;
   padding: 18px 50px;
-  margin-right: 13px;
+  margin-right: 28px;
   background-color: var(--orange);
   border-radius: 16px;
   color: var(--white);
@@ -812,13 +834,47 @@ ul {
 }
 
 .input-form__checkbox-input {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 32px;
+  position: absolute;
+  opacity: 0;
+  width: 14px;
+  height: 14px;
 }
 
 .input-form__checkbox-input:active {
   color: #97EE3F;
+}
+
+.input-form__checkbox-signature {
+  position: relative;
+  padding-left: 18px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: var(--white);
+}
+
+.input-form__checkbox-signature::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  width: 14px;
+  height: 14px;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: translateY(-50%);
+}
+
+.input-form__checkbox-input:checked+.input-form__checkbox-signature::before {
+  background-image: url(../img/footer/tick.svg);
+  background-size: contain;
+}
+
+.input-form__checkbox-input:focus-visible+.input-form__checkbox-signature::before {
+  outline: 2px solid red;
+  outline-offset: 3px;
 }
 
 .footer__column-3 {
@@ -828,7 +884,7 @@ ul {
 
 .footer__text {
   width: 357px;
-  padding-top: 107px;
+  padding-top: 88px;
   font-weight: 400;
   font-size: 16px;
   line-height: 32px;
