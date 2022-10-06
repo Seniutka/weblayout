@@ -3,8 +3,12 @@
     max-width: 954px;
   }
 
+  /* header */
+.header {
+  margin-bottom: -5px;
+}
+
   .header__container {
-    align-items: center;
     padding: 8px 15px;
   }
 
@@ -43,5 +47,24 @@
   .header__logo-link {
     width: 150px;
     height: 48px;
+  }
+
+  /* hero */
+  .hero__content {
+    padding: 160px 77px;
+  }
+
+  .hero__header {
+    margin-bottom: 16px;
+    max-width: 100%;
+    font-size: 60px;
+    line-height: 73px;
+  }
+
+  .hero__text {
+    margin-bottom: 60px;
+    max-width: 100%;
+    font-size: 20px;
+    line-height: 24px;
   }
 }
