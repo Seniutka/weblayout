@@ -50,6 +50,10 @@
   }
 
   /* hero */
+  .hero {
+    padding-bottom: 11px;
+  }
+
   .hero__content {
     padding: 160px 77px;
   }
@@ -66,5 +70,38 @@
     max-width: 100%;
     font-size: 20px;
     line-height: 24px;
+  }
+
+  /* info */
+  .info__text {
+    width: 100%;
+    margin-bottom: 59px;
+  }
+
+  .info__pic-container {
+    flex-direction: column;
+  }
+
+  .info__left-card {
+    width: 100%;
+    min-height: 640px;
+    margin-bottom: 32px;
+  }
+
+  .left-card__text {
+    flex-basis: 55%;
+  }
+
+  .left-card__button {
+    padding: 17px 34px;
+  }
+
+  .info__right-cards {
+    max-width: 100%;
+  }
+
+  .card--style {
+    padding-left: 317px;
+    background-position: left 76px top 64px;
   }
 }
