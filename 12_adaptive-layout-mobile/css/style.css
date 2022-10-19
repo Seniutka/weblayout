@@ -97,7 +97,7 @@ ul {
 }
 
 .container {
-  max-width: 95%;
+  max-width: 1800px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -145,7 +145,7 @@ ul {
   background-color: var(--white);
   box-shadow: 0px 5px 40px rgba(0, 0, 0, 0.1);
   border-radius: 0px 0px 32px 32px;
-  padding: 16px 0;
+  padding: 19px 0;
 }
 
 .header__container {
@@ -236,7 +236,7 @@ ul {
 
 /* hero */
 .hero {
-  padding-top: 47px;
+  padding-top: 42px;
   padding-bottom: 28px;
 }
 
@@ -295,7 +295,7 @@ ul {
 
 /* info */
 .info {
-  padding-top: 25px;
+  padding-top: 22px;
   padding-bottom: 50px;
 }
 
@@ -554,8 +554,8 @@ ul {
 
 /* faq */
 .faq {
-  padding-top: 59px;
-  padding-bottom: 50px;
+  padding-top: 61px;
+  padding-bottom: 95px;
 }
 
 .faq__header {
@@ -685,20 +685,27 @@ ul {
 
 /* footer */
 .footer {
+  padding-top: 50px;
   padding-bottom: 45px;
   background-color: var(--black);
   color: var(--gray-light);
 }
 
 .footer__content {
-  padding-top: 96px;
   padding-right: 3px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
 
-.footer__column {
+.footer__links-input-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 69%;
+  margin-bottom: 40px;
+}
+
+.footer__column:not(:last-child) {
   margin-right: auto;
   min-width: 33%;
 }
@@ -771,7 +778,7 @@ ul {
 }
 
 .input-form {
-  width: 32%;
+  width: 51%;
 }
 
 .input-form__header {
@@ -790,7 +797,7 @@ ul {
 }
 
 .input-form__input {
-  padding: 14px 24px;
+  padding: 14px 28px;
   color: var(--white);
   background-color: var(--deep-gray);
   border: none;
@@ -839,8 +846,8 @@ ul {
 }
 
 .input-form__btn {
-  padding: 18px 50px;
-  margin-right: 28px;
+  padding: 18px 53px;
+  margin-right: 21px;
   background-color: var(--orange);
   border-radius: 16px;
   color: var(--white);
